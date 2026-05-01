@@ -370,17 +370,254 @@ body {
 .footer {
   border-top: 2px solid var(--border);
   text-align: center;
-  padding: 24px;
+  padding: 32px 24px;
   font-size: 10px;
   color: var(--text-dim);
   max-width: 1280px;
-  margin: 40px auto 0;
+  margin: 0 auto;
 }
+.footer-inner { display:flex; flex-direction:column; align-items:center; gap:10px; }
+.footer-links { display:flex; gap:16px; }
+.footer-social {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  color: var(--orange);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  transition: border-color .2s, background .2s;
+}
+.footer-social:hover { border-color: var(--orange); background: var(--panel); }
 .footer p + p { margin-top: 4px; }
+
+/* ===== PAGE SECTIONS ===== */
+.page-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 64px 24px;
+  border-top: 1px solid var(--border);
+}
+.page-section.alt-bg { background: var(--panel); border-radius: 0; max-width: 100%; }
+.page-section.alt-bg .section-inner { max-width: 1280px; margin: 0 auto; }
+.section-inner { max-width: 1280px; margin: 0 auto; }
+.section-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 20px;
+  color: var(--cream);
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+/* ABOUT */
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.about-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 24px;
+  transition: border-color .2s;
+}
+.page-section.alt-bg .about-card { background: var(--panel-light); }
+.about-card:hover { border-color: var(--orange); }
+.about-icon {
+  font-size: 24px;
+  color: var(--orange);
+  display: block;
+  margin-bottom: 12px;
+}
+.about-card h3 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  color: var(--cream);
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+.about-card p { font-size: 12px; color: var(--text-dim); line-height: 1.7; }
+.about-card p strong { color: var(--cream); }
+
+/* HOW IT WORKS */
+.steps-list { display:flex; flex-direction:column; gap:24px; }
+.step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--panel-light);
+  border: 1px solid var(--border);
+  padding: 24px;
+  transition: border-color .2s;
+}
+.step:hover { border-color: var(--orange); }
+.step-num {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 20px;
+  color: var(--orange);
+  min-width: 56px;
+  text-align: center;
+}
+.step h3 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  color: var(--cream);
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+.step p { font-size: 12px; color: var(--text-dim); line-height: 1.7; }
+
+/* FAQ */
+.faq-list { display:flex; flex-direction:column; gap:8px; max-width: 800px; margin: 0 auto; }
+.faq-item {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 0;
+  transition: border-color .2s;
+}
+.faq-item:hover { border-color: var(--orange); }
+.faq-item summary {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  color: var(--cream);
+  padding: 16px 20px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.8;
+}
+.faq-item summary::after { content: '+'; color: var(--orange); font-size: 14px; }
+.faq-item[open] summary::after { content: '-'; }
+.faq-item p {
+  font-size: 12px;
+  color: var(--text-dim);
+  padding: 0 20px 16px;
+  line-height: 1.7;
+}
+
+/* ROADMAP */
+.roadmap-list { display:flex; flex-direction:column; gap:0; position:relative; padding-left: 30px; }
+.roadmap-list::before {
+  content: '';
+  position: absolute;
+  left: 11px; top: 0; bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+.roadmap-phase { display:flex; gap:20px; align-items:flex-start; position:relative; padding-bottom: 32px; }
+.roadmap-phase:last-child { padding-bottom: 0; }
+.phase-marker {
+  font-size: 16px;
+  color: var(--border);
+  min-width: 24px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  margin-left: -30px;
+  background: var(--panel);
+  padding: 4px 0;
+}
+.phase-marker.active-phase { color: var(--orange); }
+.phase-content {
+  background: var(--panel-light);
+  border: 1px solid var(--border);
+  padding: 20px;
+  flex: 1;
+  transition: border-color .2s;
+}
+.phase-content:hover { border-color: var(--orange); }
+.phase-content h3 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  color: var(--cream);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.phase-content ul { list-style: none; display:flex; flex-direction:column; gap:6px; }
+.phase-content li {
+  font-size: 12px;
+  color: var(--text-dim);
+  padding-left: 16px;
+  position: relative;
+}
+.phase-content li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--orange);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+}
+
+/* ===== WALLET MODAL ===== */
+.wallet-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wallet-modal {
+  background: var(--panel);
+  border: 2px solid var(--border);
+  padding: 28px;
+  min-width: 320px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.wallet-modal-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  color: var(--cream);
+  text-align: center;
+}
+.wallet-modal-sub {
+  font-size: 11px;
+  color: var(--text-dim);
+  text-align: center;
+  margin-bottom: 8px;
+}
+.wallet-option {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  background: var(--panel-light);
+  border: 1px solid var(--border);
+  color: var(--cream);
+  padding: 14px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: border-color .2s, background .2s;
+}
+.wallet-option:hover { border-color: var(--orange); background: var(--dark); }
+.wallet-option-icon {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  color: var(--orange);
+  width: 28px;
+  text-align: center;
+}
+.wallet-modal-close {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 4px;
+  transition: border-color .2s;
+}
+.wallet-modal-close:hover { border-color: var(--orange); color: var(--cream); }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .main { grid-template-columns: 1fr; }
   .nav { display:none; }
   .right-col { position:static; }
+  .about-grid { grid-template-columns: 1fr; }
+  .step { flex-direction: column; }
 }

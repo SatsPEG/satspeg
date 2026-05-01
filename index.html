@@ -17,17 +17,18 @@
       <span class="logo-text">Sats<span class="accent">PEG</span></span>
     </div>
     <nav class="nav">
-      <a href="#" class="nav-link active">HOME</a>
-      <a href="#" class="nav-link">ABOUT</a>
-      <a href="#" class="nav-link">HOW IT WORKS</a>
-      <a href="#" class="nav-link">FAQ</a>
-      <a href="#" class="nav-link">ROADMAP</a>
+      <a href="#home" class="nav-link active">HOME</a>
+      <a href="#about" class="nav-link">ABOUT</a>
+      <a href="#how-it-works" class="nav-link">HOW IT WORKS</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="#roadmap" class="nav-link">ROADMAP</a>
     </nav>
     <button class="wallet-btn-header" id="connectWalletHeader">CONNECT</button>
   </div>
 </header>
 
-<!-- MAIN -->
+<!-- ===== HOME ===== -->
+<section id="home">
 <main class="main">
   <!-- LEFT COLUMN -->
   <section class="left-col">
@@ -100,13 +101,13 @@
       <div class="qty-section">
         <span class="qty-label">MINT QUANTITY</span>
         <div class="qty-controls">
-          <button class="qty-btn" id="qtyMinus">−</button>
+          <button class="qty-btn" id="qtyMinus">&#8722;</button>
           <span class="qty-display" id="qtyDisplay">1</span>
           <button class="qty-btn" id="qtyPlus">+</button>
         </div>
       </div>
 
-      <button class="mint-btn" id="mintBtn" disabled>MINT — NOT LIVE</button>
+      <button class="mint-btn" id="mintBtn" disabled>MINT &#8212; NOT LIVE</button>
 
       <div class="mint-details">
         <div class="detail-row"><span>Supply</span><span>8,000</span></div>
@@ -116,11 +117,173 @@
     </div>
   </section>
 </main>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="page-section">
+  <div class="section-inner">
+    <h2 class="section-title">ABOUT <span class="accent">SatsPEG</span></h2>
+    <div class="about-grid">
+      <div class="about-card">
+        <span class="about-icon">&#9670;</span>
+        <h3>What is SatsPEG?</h3>
+        <p>SatsPEG is a collection of 8,000 unique pixel sigils living on <strong>Citrea</strong>, the first ZK-rollup on Bitcoin. Each sPEG represents a unit of satoshi liquidity crystallized into a distinct on-chain identity.</p>
+      </div>
+      <div class="about-card">
+        <span class="about-icon">&#9733;</span>
+        <h3>Why Citrea?</h3>
+        <p>Citrea brings programmability to Bitcoin through zero-knowledge proofs. SatsPEG leverages this to create verifiable, Bitcoin-secured digital identities without leaving the BTC ecosystem.</p>
+      </div>
+      <div class="about-card">
+        <span class="about-icon">&#9830;</span>
+        <h3>Rarity System</h3>
+        <p>Six rarity tiers define each sigil: <span style="color:#9E9E9E">Common</span>, <span style="color:#4CAF50">Uncommon</span>, <span style="color:#2196F3">Rare</span>, <span style="color:#9C27B0">Epic</span>, <span style="color:#F7931A">Legend</span>, and <span style="color:#E91E9E">Mystic</span>. Rarity is determined at mint and cannot be changed.</p>
+      </div>
+      <div class="about-card">
+        <span class="about-icon">&#8734;</span>
+        <h3>Ownership</h3>
+        <p>Each SatsPEG is fully on-chain. No IPFS, no centralized servers. Your sigil exists as long as Bitcoin exists. True digital permanence secured by the most robust network in crypto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section id="how-it-works" class="page-section alt-bg">
+  <div class="section-inner">
+    <h2 class="section-title">HOW IT <span class="accent">WORKS</span></h2>
+    <div class="steps-list">
+      <div class="step">
+        <span class="step-num">01</span>
+        <div>
+          <h3>Connect Your Wallet</h3>
+          <p>Connect any EVM-compatible wallet (MetaMask, OKX, Rabby, Phantom, etc.) and switch to the Citrea Mainnet. The site will auto-prompt you to add the network if needed.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <div>
+          <h3>Choose Quantity</h3>
+          <p>Select how many SatsPEG you want to mint (1-10 per transaction). Each mint randomly assigns a rarity tier to your sigil.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <div>
+          <h3>Mint Your Sigil</h3>
+          <p>Confirm the transaction in your wallet. Your sPEG is generated on-chain and assigned a unique visual identity and rarity tier instantly.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-num">04</span>
+        <div>
+          <h3>Own Forever</h3>
+          <p>Your SatsPEG lives fully on-chain on Citrea, secured by Bitcoin. Trade it, hold it, or use it as your on-chain identity across the ecosystem.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="page-section">
+  <div class="section-inner">
+    <h2 class="section-title"><span class="accent">FAQ</span></h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What wallets are supported?</summary>
+        <p>Any EVM-compatible wallet works with SatsPEG, including MetaMask, OKX Wallet, Rabby, Phantom (EVM mode), Trust Wallet, Coinbase Wallet, and more.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is the mint price?</summary>
+        <p>Mint price will be announced before launch. The currency used is cBTC (Citrea's native token, pegged to BTC). Follow our Twitter for updates.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How is rarity determined?</summary>
+        <p>Rarity is assigned randomly at the moment of minting using on-chain randomness. There are six tiers: Common, Uncommon, Rare, Epic, Legend, and Mystic. The distribution is weighted, with Mystic being the rarest.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is Citrea?</summary>
+        <p>Citrea is the first ZK-rollup that settles on Bitcoin. It inherits Bitcoin's security while enabling smart contracts and programmable assets. SatsPEG is one of the first NFT collections on this network.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is there a max mint per wallet?</summary>
+        <p>You can mint up to 10 SatsPEG per transaction. There may be a per-wallet cap announced closer to launch.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Where can I trade my SatsPEG?</summary>
+        <p>After mint, SatsPEG will be tradeable on any NFT marketplace that supports the Citrea network. Details will be shared post-launch.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ROADMAP ===== -->
+<section id="roadmap" class="page-section alt-bg">
+  <div class="section-inner">
+    <h2 class="section-title">ROAD<span class="accent">MAP</span></h2>
+    <div class="roadmap-list">
+      <div class="roadmap-phase">
+        <div class="phase-marker active-phase">&#9670;</div>
+        <div class="phase-content">
+          <h3>Phase 1 — Genesis</h3>
+          <ul>
+            <li>Website launch</li>
+            <li>Community building (Twitter, Discord)</li>
+            <li>Smart contract development &amp; audit</li>
+            <li>Whitelist registration</li>
+          </ul>
+        </div>
+      </div>
+      <div class="roadmap-phase">
+        <div class="phase-marker">&#9670;</div>
+        <div class="phase-content">
+          <h3>Phase 2 — Mint</h3>
+          <ul>
+            <li>Whitelist mint (limited access)</li>
+            <li>Public mint (8,000 supply)</li>
+            <li>Rarity reveal</li>
+            <li>Secondary marketplace listing</li>
+          </ul>
+        </div>
+      </div>
+      <div class="roadmap-phase">
+        <div class="phase-marker">&#9670;</div>
+        <div class="phase-content">
+          <h3>Phase 3 — Ecosystem</h3>
+          <ul>
+            <li>SatsPEG holder benefits &amp; perks</li>
+            <li>On-chain identity integrations</li>
+            <li>Partnership with Citrea ecosystem projects</li>
+            <li>Community governance proposals</li>
+          </ul>
+        </div>
+      </div>
+      <div class="roadmap-phase">
+        <div class="phase-marker">&#9670;</div>
+        <div class="phase-content">
+          <h3>Phase 4 — Beyond</h3>
+          <ul>
+            <li>SatsPEG v2 collection</li>
+            <li>Cross-chain expansion</li>
+            <li>DAO formation</li>
+            <li>Metaverse &amp; gaming integrations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer class="footer">
-  <p>SatsPEG are pixelized identities derived from satoshi liquidity.</p>
-  <p>&copy; 2024 SatsPEG. All rights reserved.</p>
+  <div class="footer-inner">
+    <p>SatsPEG are pixelized identities derived from satoshi liquidity.</p>
+    <div class="footer-links">
+      <a href="https://x.com/SatsPEG" target="_blank" rel="noopener" class="footer-social">&#120143; Twitter</a>
+    </div>
+    <p>&copy; 2026 SatsPEG. All rights reserved.</p>
+  </div>
 </footer>
 
 <script src="nft.js"></script>
