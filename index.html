@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SatsPEG — Pixel Sigils on Citrea</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <canvas id="logoIcon" width="28" height="28"></canvas>
+      <span class="logo-text">Sats<span class="accent">PEG</span></span>
+    </div>
+    <nav class="nav">
+      <a href="#" class="nav-link active">HOME</a>
+      <a href="#" class="nav-link">ABOUT</a>
+      <a href="#" class="nav-link">HOW IT WORKS</a>
+      <a href="#" class="nav-link">FAQ</a>
+      <a href="#" class="nav-link">ROADMAP</a>
+    </nav>
+    <button class="wallet-btn-header" id="connectWalletHeader">CONNECT</button>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="main">
+  <!-- LEFT COLUMN -->
+  <section class="left-col">
+    <div class="badge-row">
+      <span class="badge">&#9670; CITREA MAINNET</span>
+    </div>
+    <h1 class="title">Satoshi PEG</h1>
+    <p class="subtitle accent">SatsPEG</p>
+    <p class="desc"><strong>SatsPEG</strong> are pixel sigils representing units of satoshi liquidity.</p>
+    <p class="desc">Each full sPEG becomes a unique on-chain identity.</p>
+
+    <div class="coming-soon-row">
+      <button class="coming-soon-btn">&#9733; COMING SOON</button>
+    </div>
+
+    <div class="launch-badges">
+      <span class="launch-badge">LAUNCHING ON CITREA MAINNET</span>
+      <span class="launch-badge small">&#9670; CITREA</span>
+    </div>
+
+    <!-- NFT PREVIEW -->
+    <div class="nft-preview-wrapper">
+      <div class="nft-preview-frame">
+        <canvas id="mainNft" width="240" height="240"></canvas>
+        <canvas id="particleLayer" width="240" height="240"></canvas>
+      </div>
+      <div class="nft-glow"></div>
+    </div>
+
+    <!-- VARIANTS -->
+    <div class="variants-row">
+      <div class="variant-card" data-rarity="Common"><canvas class="variant-canvas" data-variant="0" width="72" height="72"></canvas><span class="rarity-label">Common</span></div>
+      <div class="variant-card" data-rarity="Uncommon"><canvas class="variant-canvas" data-variant="1" width="72" height="72"></canvas><span class="rarity-label">Uncommon</span></div>
+      <div class="variant-card" data-rarity="Rare"><canvas class="variant-canvas" data-variant="2" width="72" height="72"></canvas><span class="rarity-label">Rare</span></div>
+      <div class="variant-card" data-rarity="Epic"><canvas class="variant-canvas" data-variant="3" width="72" height="72"></canvas><span class="rarity-label">Epic</span></div>
+      <div class="variant-card active-variant" data-rarity="Legend"><canvas class="variant-canvas" data-variant="4" width="72" height="72"></canvas><span class="rarity-label">Legend</span></div>
+      <div class="variant-card" data-rarity="Mystic"><canvas class="variant-canvas" data-variant="5" width="72" height="72"></canvas><span class="rarity-label">Mystic</span></div>
+    </div>
+  </section>
+
+  <!-- RIGHT COLUMN -->
+  <section class="right-col">
+    <div class="mint-panel">
+      <h2 class="mint-title">MINT <span class="accent">SatsPEG</span></h2>
+
+      <div class="mint-info-grid">
+        <div class="mint-info-item">
+          <span class="mint-label">PRICE</span>
+          <span class="mint-value">TBA</span>
+        </div>
+        <div class="mint-info-item">
+          <span class="mint-label">MINTED</span>
+          <span class="mint-value">0 / 8000</span>
+        </div>
+      </div>
+
+      <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 0%"></div>
+      </div>
+
+      <div class="status-row">
+        <span class="status-label">STATUS:</span>
+        <span class="status-value not-live">NOT LIVE</span>
+      </div>
+
+      <button class="connect-wallet-btn" id="connectWallet">
+        <span class="wallet-icon">&#9670;</span> CONNECT WALLET
+      </button>
+
+      <div class="qty-section">
+        <span class="qty-label">MINT QUANTITY</span>
+        <div class="qty-controls">
+          <button class="qty-btn" disabled>−</button>
+          <span class="qty-display">1</span>
+          <button class="qty-btn" disabled>+</button>
+        </div>
+      </div>
+
+      <button class="mint-btn" disabled>MINT</button>
+
+      <div class="mint-details">
+        <div class="detail-row"><span>Supply</span><span>8,000</span></div>
+        <div class="detail-row"><span>Network</span><span>Citrea</span></div>
+        <div class="detail-row"><span>Type</span><span>Pixel Sigil</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>SatsPEG are pixelized identities derived from satoshi liquidity.</p>
+  <p>&copy; 2024 SatsPEG. All rights reserved.</p>
+</footer>
+
+<script src="nft.js"></script>
+</body>
+</html>
