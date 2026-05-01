@@ -100,13 +100,13 @@
       <div class="qty-section">
         <span class="qty-label">MINT QUANTITY</span>
         <div class="qty-controls">
-          <button class="qty-btn" disabled>−</button>
-          <span class="qty-display">1</span>
-          <button class="qty-btn" disabled>+</button>
+          <button class="qty-btn" id="qtyMinus">−</button>
+          <span class="qty-display" id="qtyDisplay">1</span>
+          <button class="qty-btn" id="qtyPlus">+</button>
         </div>
       </div>
 
-      <button class="mint-btn" disabled>MINT</button>
+      <button class="mint-btn" id="mintBtn" disabled>MINT — NOT LIVE</button>
 
       <div class="mint-details">
         <div class="detail-row"><span>Supply</span><span>8,000</span></div>
@@ -124,5 +124,6 @@
 </footer>
 
 <script src="nft.js"></script>
+<script src="wallet.js"></script>
 </body>
 </html>

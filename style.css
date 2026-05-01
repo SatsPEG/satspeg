@@ -71,6 +71,7 @@ body {
   transition: background .2s;
 }
 .wallet-btn-header:hover { background: var(--orange-dim); }
+.wallet-btn-header.connected { background: var(--panel-light); color: var(--orange); border: 1px solid var(--orange); }
 
 /* ===== MAIN GRID ===== */
 .main {
@@ -306,6 +307,8 @@ body {
   transition: background .2s, color .2s;
 }
 .connect-wallet-btn:hover { background: var(--orange); color: var(--dark); }
+.connect-wallet-btn.connected { background: var(--panel-light); color: var(--orange); border-color: var(--orange); }
+.connect-wallet-btn.connected:hover { background: var(--panel); }
 .wallet-icon { font-size: 10px; }
 .qty-section { text-align:center; }
 .qty-label {
@@ -323,10 +326,12 @@ body {
   width: 36px; height: 36px;
   background: var(--panel-light);
   border: 1px solid var(--border);
-  color: var(--text-dim);
-  cursor: not-allowed;
-  transition: border-color .2s;
+  color: var(--cream);
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
 }
+.qty-btn:hover { border-color: var(--orange); background: var(--panel); }
+.qty-btn:active { background: var(--orange); color: var(--dark); }
 .qty-display {
   font-family: 'Press Start 2P', monospace;
   font-size: 18px;
